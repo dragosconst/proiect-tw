@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <title> Biblioteca whatever</title>
+</head>
+<body>
+    <div id="div_logo">
+        <p id="text_logo">
+            Biblioteca HATZ
+        </p>
+        <img id="img_logo" src="img/loguts.png" alt="logo">
+        <img id="arrow_down" src="img/sagetica.png" alt="sageticaDown" onclick="maximizeMenu();">
+    </div>
+    <div id="div_navbar">
+        <ul id="items_navbar">
+            <li><a href="/">Acasa</a></li>
+			<li>Comanda</li>
+			<li id="hideimg">Ascunde imagini</li>
+			<li id="hidetabs">Ascunde taburi</li>
+            <li>
+				<div class="regular_drop">
+					<span id="carti">Carti</span>
+					<div class="regular_drop-content">
+						<p> <a href="carti">Carti pe hartie</a></p>
+						<p> <a href="carti">Carti electronice</a></p>
+					</div>
+				</div>
+			</li>
+			<li id="scheme">
+				<div class="regular_drop"> 
+					<span id="scheme_tap">Schema de culori</span>
+					<div class="regular_drop-content">
+						<p id="normal_col" onclick="clickedStyleChange(1)" color="deepskyblue">Normala</p>
+						<p id="cool_red_col" onclick="clickedStyleChange(2)">Rosu</p>
+						<p id="funky_col" onclick="clickedStyleChange(3)">Verdeish</p>
+					</div>
+				</div>
+			</li>
+            <li id="right_li">Date de contact<img id="arrow" src="img/sagetica.png" alt="sagetica" onclick="minimizeMenu();"></li>
+        </ul>    
+    </div>
+	<div class="articles_container">
+		<article class="regular_article" id="first_article">
+			<h1 id="first_title">Carti noi in stoc</h1>
+			<hr class="article_title_line">
+			<p id="first_art_p">Am adaugat in stocul bibliotecii noi carti de fictiune, in format pe hartie, dar si electronic, pentru a va usura perioada de carantina. Numarul total de carti adaugate este de peste
+			50, printre ele se numara opere ale lui Stephen King, ca "The Shining", "It", seria "The Dark Tower", "The Dead Zone" etc., din categoria de fictiune non-horror de tip SF am adaugat, printre altele, "2001: A Space Odyssey" de 
+			Arthur C. Clarke si seria "Fundatia" a lui Asimov; din categoria de fantezie inalta avem seria "Stapanul Inelelor" de J.R.R. Tolkien, seria "Urzeala tronurilor" de George R.R. Martin, seria "Eragon" de Christopher Paolini etc.
+			Avem de asemenea si romane politiste, realiste, romantice si multe alte genuri ale fictiunii. <a href="facebook.com"> Click aici pentru mai multe informatii.</a> Lectura placuta!
+			</p>
+			<img id="it" src="img/it.jpg" alt="it de king">
+			<img id="tlotr" src="img/tlotr.jpg" alt="tlotr de tolkien">
+			<img id="eragon" src="img/eragon.jpg" alt="eragon de paolini">
+			<img id="2001" src="img/2001.jpg" alt="2001 de clarke">
+			<img id="got" src="img/got.jpg" alt="got de martin">
+		</article>
+		<article class="regular_article" id="second_article">
+			<h1 id="second_title">Am adaugat optiunea de curierat contactless</h1>
+			<hr class="article_title_line">
+			<p id="second_art_p">
+			Data fiind situatia pandemiei de Coronavirus in Romania, biblioteca nu va fi disponibila pe perioada nedeterminata. Cu toate acestea, vom oferi servicii de curierat contactless, pentru cei dornici de lectura. Cartile sunt, desigur,
+			gratuite, doar ca serviciul de curierat va fi contra cost, plata si tips-urile putand fi realizate online. De asemenea, nu uitati ca avem disponibile 350+ de carti in format digital, complet gratuit(fisierele sunt de tip pdf, epub sau azw).
+			</p>
+		</article>
+		<article class="regular_article" id="third_article">
+			<h1 id="third_title">Sarbatorim ziua matematicii</h1>
+			<hr class="article_title_line">
+			<p id="third_art_p">
+			Astazi, pe 14 martie, este sarbatorita Ziua Internationala a Matematicii. Cu aceasta ocazie, va invitam sa incercati cartile din selectia noastra despre matematica. Desi matematica nu are neaparat reputatia ca fiind o disciplina placuta,
+			noi am vrea sa incercam, macar, sa va demonstram contrariul. Astfel, recomandam pentru, sa zicem, <i>casual readers</i> urmatoarele carti: "Zero: The Biography of a Dangerous Idea", de Charles Seife, "The Joy of x" de Steven Strogatz sau
+			"Things to Make and Do in the Fourth Dimension" de Matt Parker. Pentru cititori mai experimentati cu matematica, recomandam "Proofs from The Book" de Aigner si Ziegler, "The Nothing that Is: A Natural History of Zero" de Robert Kaplan sau
+			"The Symmetries of Things" de John Conway. Indiferent de ce carte va alegeti, speram ca va va oferi o lectura placuta si interesanta.
+			</p>
+			<img id="4dim" src="img/4dim.jpg" alt="4dim de parker">
+			<img id="joyx" src="img/joyx.jpg" alt="joyx de strogatz">
+			<img id="sym" src="img/sym.jpg" alt="sym de conway">
+		</article>
+	</div>
+	<script>let isAdmin = false, isUser = false, isSpecial = false, userName = '', faulty_login = false;</script> 
+	<% let mata = locals.userName %>
+	<% if(locals.privilege !== undefined) {%>
+		<script>userName = '<%-userName =  locals.username%>';</script>
+		<% if(locals.privilege === "admin") {%>
+			<script>isAdmin = true;</script>]
+		<%} else if(locals.privilege === "user") {%>
+			<script>isUser = true;</script>
+		<%} else if(locals.privilege === "special") {%>
+			<script>isSpecial = true;</script>
+		<%} else {%>
+			<script>faulty_login = true;</script>
+		<%} %>
+	<%}%>
+	<script>let pageName = "mainSite";</script>
+	<script src="js/timeSpent.js"></script>
+	<script src="js/small_timer_vara.js"></script>
+	<script src="js/site.js"></script>
+	<script src="js/nice_text.js"></script>
+	<script src="js/inactivity.js"></script>
+	<script src="js/block_screen.js"></script>
+</body>
+</html>

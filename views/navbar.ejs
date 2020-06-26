@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <title> Biblioteca whatever</title>
+</head>
+<body>
+    <div id="div_logo">
+        <p id="text_logo">
+            Biblioteca HATZ
+        </p>
+        <img id="img_logo" src="img/loguts.png" alt="logo">
+        <img id="arrow_down" src="img/sagetica.png" alt="sageticaDown" onclick="maximizeMenu();">
+    </div>
+    <div id="div_navbar">
+        <ul id="items_navbar">
+            <li><a href="/">Acasa</a></li>
+            <li>Comanda</li>
+            <li id="hideimg">Ascunde imagini</li>
+			<li id="hidetabs">Ascunde taburi</li>
+            <li>
+				<div class="regular_drop">
+					<span id="carti">Carti</span>
+					<div class="regular_drop-content">
+						<p> <a href="carti">Carti pe hartie</a></p>
+						<p> <a href="carti">Carti electronice</a></p>
+					</div>
+				</div>
+			</li>
+			<li id="scheme">
+				<div class="regular_drop"> 
+					<span id="scheme_tap">Schema de culori</span>
+					<div class="regular_drop-content">
+						<p id="normal_col" onclick="clickedStyleChange(1)" color="deepskyblue">Normala</p>
+						<p id="cool_red_col" onclick="clickedStyleChange(2)">Rosu</p>
+						<p id="funky_col" onclick="clickedStyleChange(3)">Verdeish</p>
+					</div>
+				</div>
+			</li>
+            <li id="right_li">Date de contact<img id="arrow" src="img/sagetica.png" alt="sagetica" onclick="minimizeMenu();"></li>
+        </ul>    
+    </div>
+</body>
+</html>

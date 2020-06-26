@@ -1,0 +1,107 @@
+#form_div
+{
+    display: block;
+    position: absolute;
+
+    top: 20%;
+    margin-left: 10%;
+    padding: 5px 5px;
+    border: none;
+    background-color: deepskyblue;
+    border-radius: 10px;
+
+    font-family: "Source Sans Pro";
+    font-size: larger;
+
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#form_div label
+{
+    -ms-user-select: none;
+	user-select: none;
+}
+#form_div input[type=search]
+{
+    display: block;
+    border-radius: 5px;
+    border: 1px solid;
+    background-image: url("../img/search.png");
+    background-repeat: no-repeat;
+    background-size: auto 93%;
+    background-position: 1px 1px;
+    padding: 3px;
+    padding-left: 30px;
+    margin-top: 10px;
+
+    font-size: large;
+}
+
+.to_delete
+{
+    top: 40vh;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0.1%;    
+
+    animation-name: float_up_carti;
+    animation-duration: 1s;
+}
+
+@keyframes float_up_carti
+{
+	from
+	{
+		top: 150vh;
+		opacity: 0;
+	}
+	to
+	{
+		top: 40vh;	
+		opacity: 1;	
+	}
+}
+
+@media screen and (max-width:1000px) {
+    .to_delete{
+        top: 45vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #form_div{
+        margin-left: 15%;
+        font-size: 60px;
+        width: 65vw;
+    }
+    #form_div input[type=search]
+    {
+        padding-left: 10%;
+        font-size: 50px;
+    }
+    #form_div input[type=checkbox]
+    {
+    transform: scale(3);
+    -ms-transform: scale(3);
+    -webkit-transform: scale(3);
+    }
+
+    @keyframes float_up_carti
+    {
+        from
+        {
+            top: 150vh;
+            opacity: 0;
+        }
+        to
+        {
+            top: 45vh;	
+            opacity: 1;	
+        }
+
+    }
+}

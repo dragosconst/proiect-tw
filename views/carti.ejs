@@ -1,0 +1,33 @@
+<html>
+    <%- include ("navbar") %>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/carti.css">
+    </head>
+    <body>
+        <div id="form_div">
+            <form id="search_form">
+                <label for="searchInput">Cauta o carte:</label>
+                <input id="searchInput" name="searchInput" type="search" placeholder="Scrie titlul\genul\autorul cartii..." >
+                <input id="lengthInput" name="lengthInput" type="search" placeholder="Scrie lungimea cuvantului cautat...">
+                <input id="substrInput" name="substrInput" type="search" placeholder="Scrie un subsir din cuvantul cautat...">
+                <input id="numInput" name="numInput" type="checkbox" value="yes">
+                <label for="numInput">Poate avea caractere numerice?</label>  
+            </form>
+        </div>
+        <% for(let key in cartiBD) {%>
+            <article class="regular_article to_delete">
+                <h1><%= cartiBD[key].title%></h1>
+                <hr class="article_title_line">
+                <p><%= cartiBD[key].description %></p>
+            </article>
+        <% } %>
+        <script>let pageName = "carti";</script>
+        <script src="./js/timeSpent.js"></script>
+        <script src="./js/recolor_general.js"></script>
+        <script src="./js/recolor_carti_specific.js"></script>
+        <script src="./js/searchBar.js"></script>
+        <script src="./js/carti_mq.js"></script>
+        <script src="./js/inactivity.js"></script>
+        <script src="./js/nice_text.js"></script>
+    </body>
+</html>

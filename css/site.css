@@ -1,0 +1,492 @@
+body{ 
+	background: rgb(63,53,233);
+	background: linear-gradient(0deg, rgba(63,53,233,1) 6%, rgba(110,110,222,1) 39%, rgba(0,212,255,1) 100%); 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+p, li, a{
+    font-family: "Source Sans Pro";
+	
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: lightgray;   
+}
+li{
+    float: left; 
+    
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: white;
+}
+ul{
+    margin-top:0;       
+    list-style-type: none;
+    padding: 0;
+    
+    overflow: visible;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#normal_col{
+	background-color:deepskyblue;
+	border-color: deepskyblue;
+}
+#cool_red_col{
+	background-color: #c70039;
+	border-color: #c70039;
+}
+#funky_col{
+	background-color: #01d28e;
+	border-color: #01d28e;
+}
+.regular_drop
+{
+	position:relative;
+	display:inline-block;
+	
+	-ms-user-select: none;
+	user-select: none;
+}
+.regular_drop-content
+{
+	display: none;
+	position: absolute;
+	background-color: deepskyblue;
+	border-color: deepskyblue;
+	min-width: 60px;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+	
+	-ms-user-select: none;
+	user-select: none;
+}
+.regular_drop:hover .regular_drop-content, .regular_drop:active .regular_drop-content{
+	display: block;
+	cursor: pointer;
+}
+.regular_drop p{
+	margin-left: 10px;
+	margin-right: 10px;
+}	
+
+#div_logo, #div_navbar
+{
+    margin-left: 10%;
+    margin-right: 10%;
+	position: fixed;
+    
+    background-color: deepskyblue;
+    
+	width: 80%;
+	height: 10%;
+    
+    border: 0px solid;
+	z-index: 100;
+	
+	-ms-user-select: none;
+	user-select: none;
+	
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#smallTimer{
+	top: 85%;
+}
+#time_pagina{
+	top: 85%;
+	border: none;
+	padding: 5px 5px;
+	left: 1%;
+}
+
+.popup_thing{
+	display: inline-block;
+	margin-right: 0.5%;
+	background-color: deepskyblue;
+	position: fixed;
+	
+	top: 0.3%;
+	left: 92%;
+	
+	border: 10px solid;
+	border-color: deepskyblue;
+	border-radius: 5px;
+	z-index: 105;
+	
+	font-size: 20px;
+	color: white;
+	
+	animation-name: pop_come_in;
+	animation-duration: 0.3s;
+	
+	-ms-user-select: none;
+	user-select: none;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2	s ease-in-out;
+}
+.popup_thing input, form{
+	width: 100%;	
+}
+.popup_thing input[type=submit]{
+	border: 1px solid black;
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2	s ease-in-out;
+}
+.popup_thing:hover{
+	cursor: pointer;
+	
+  box-shadow: 10px 10px 8px #888888;
+}
+
+#div_logo{
+	display: flex;
+	top: 2px;
+	
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#div_navbar 
+{
+    display: flex;
+	top :10%;
+	
+	height: 5%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+	font-size: 20px;
+}
+#items_navbar{
+	
+	width: 100%;
+	height: 100%;
+}
+#right_li{
+	float: right;	
+}
+#text_logo{
+    color: white;
+    
+    margin-left: 35%;
+    margin-right: 20%;
+    margin-top: 1%;
+    font-size: 3vw;
+}
+
+#img_logo{
+	position: absolute;
+	display: block;
+    margin-left: 70%;
+    
+    width: 15%;
+    height: 100%;
+}
+#arrow{
+	position: absolute;
+	display:inline-block;
+	margin-top: 2%;
+	margin-left: 22%;
+	visibility: hidden;
+	
+	width: 50px;
+	height: 50px;
+}
+#arrow_down{
+	position: absolute;
+	display:inline-block;
+	margin-top: 15%;
+	margin-left: 90%;
+	visibility: hidden;
+	
+	width: 50px;
+	height: 50px;
+	transform: rotate(180deg);
+}
+
+@keyframes float_up
+{
+	from
+	{
+		top: 150vh;
+		opacity: 0;
+	}
+	to
+	{
+		top: 17vh;	
+		opacity: 1;	
+	}
+}
+@keyframes pop_come_in
+{
+	from
+	{
+		left: 150vw;
+	}
+	to
+	{
+		left: 92%;
+	}
+}
+.articles_container{
+	overflow: visible;
+	display:block;
+}
+.regular_article{
+	border: 10px solid;
+	border-color: rgb(84, 115, 222);
+	border-radius: 10px;
+	display:block;
+	position: relative;
+		
+	height: auto;
+	width: auto;
+	
+	overflow: visible;
+	background-color: rgb(177, 203, 241);
+	
+	animation-name: float_up;
+	animation-duration: 1.5s;
+	
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+/*
+.regular_article:hover, .regular_article *:hover{
+	background-color:red;
+}*/
+.regular_article a{
+	color: black;
+}.regular_article a:hover{
+	color: gray;
+}
+.article_title_line
+{
+	border: none;
+	background-color: black;
+	color:	#d8d8d8;
+	height: 1px;
+	margin-top: -1%;
+	margin-left: 1%;
+	margin-right: 1%;
+	border-radius: 10px;
+}
+#first_article{
+	top: 17vh;
+	
+}
+#first_article img{ /*o sa fie 5 imagini puse una langa alta pe o linie*/
+	position: relative;
+	max-width:19.1%;
+	margin-left: 0.3%;	
+}
+#second_article
+{
+	top: 17.3vh;/*ok so din ce observ, div-urile sunt puse unele sub altele, dar daca un div are pozitia schimbata, atunci schimbarea nu e propagata la cele de sub. daca le pun pe toate cu aceleasi coordonate ca cel mai de sus,
+	e schimbata automat pozitia corect pentru toate*/
+}
+#third_article
+{
+	top: 17.5vh;
+}
+#third_article img{ 
+	position: relative;
+	max-width:32.1%;
+	margin-left: 0.3%;	
+}
+
+.regular_article h1, p{
+	position: relative;
+	
+	margin-left: 1%;
+	
+    font-family: "Source Sans Pro";
+}
+/*
+.regular_article iframe{
+	position: absolute;
+	display: block;
+	
+	top: 100px;
+	margin-left: 1%;
+}*/
+
+.blurr{
+	background-color: rgba(255,255,255,0.5);
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;		
+
+	font-family: "Source Sans Pro";
+	font-size: 100px;
+	text-align: center;
+
+}
+.blurr p{
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
+
+.blocker{
+	display: block;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+}
+
+/* pt telefoane, tablete mai mici etc */
+@media screen and (max-width:1000px) {
+	#text_logo{
+		font-size: 50px;
+	}
+	#img_logo
+	{
+		margin-left: 75%;
+	}
+	#arrow
+	{
+		visibility: visible;
+	}
+	#div_navbar{
+		font-size: 50px;
+	}
+	#right_li, li{
+		background-color: deepskyblue;
+		float: none;
+	}
+	
+	.regular_drop-content{
+		visibility: hidden;
+	}
+	
+	.regular_article h1{
+		font-size: 60px;
+	}.regular_article p{
+		font-size: 40px;
+	}
+	.article_title_line{
+		height: 6px;
+	}
+	.popup_thing{
+		position: relative;
+		left: 0;
+		border: 10px solid black;
+		
+		padding: 10px 10px;
+		font-size: 50px;
+	}
+	.popup_thing input{
+		height: 3vh;
+		font-size: 50px;
+	}
+	.popup_thing input[type=submit]{
+		border: none;
+		color: white;
+		padding: 5px 10px;
+		
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		transition: all 0.2	s ease-in-out;
+	}
+	.timer_thing{
+		border:none;
+		left: 60vw;
+		font-size: 50px;
+		padding: 10px 10px;
+
+		top: 20vh;
+		position: fixed;
+	}
+	#time_pagina{
+		position: fixed;
+		top: 85%;
+	}
+
+	#first_article{
+		top: 32vh;
+	}
+	#second_article{
+		top: 32.3vh;
+	}
+	#third_article{
+		top: 32.6vh;
+	}
+	#first_article img{
+		float: none;
+		max-width: 100%;
+	}
+	#third_article img{
+		float: none;
+		max-width: 100%;
+	}
+	
+	@keyframes float_up
+	{
+		from
+		{
+			top: 150vh;
+			opacity: 0;
+		}
+		to
+		{
+			top: 32vh;	
+			opacity: 1;	
+		}
+	}
+	@keyframes  pop_come_in
+	{
+		from
+		{
+			top: 80vh;
+		}
+		to
+		{
+			top: 0vh;	
+		}
+	}
+}
